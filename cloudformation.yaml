@@ -1,27 +1,7 @@
-arameters:
-  EC2InstanceType:
-    Description: The Instance Type Chosen for EC2
-    Type: String
-    
 Resources:
-  TestInstance:
+  Instance:
     Type: AWS::EC2::Instance
     Properties:
-      ImageId: ami-074cce78125f09d61
-      InstanceType: !Ref EC2InstanceType
-      SecurityGroups:
-        - !Ref HTTPSecurityGroup
-
-  HTTPSecurityGroup:
-    Type: AWS::EC2::SecurityGroup
-    Properties:
-      GroupDescription: Enable port 80 and port 443
-      SecurityGroupIngress:
-      - CidrIp: 0.0.0.0/0
-        FromPort: 80
-        IpProtocol: tcp
-        ToPort: 80
-      - CidrIp: 0.0.0.0/0
-        FromPort: 443
-        IpProtocol: tcp
-        ToPort: 443
+      InstanceType: t2.micro
+      ImageId: ami-80861296
+      KeyName: mykey
