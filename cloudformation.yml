@@ -3,11 +3,10 @@ Resources:
   Ec2Instance:
     Type: 'AWS::EC2::Instance'
     Properties:
-      AvailabilityZone: us-east-2
       SecurityGroups:
         - !Ref InstanceSecurityGroup
       KeyName: mykey
-      ImageId: ''
+      ImageId: ami-074cce78125f09d61
       EC2InstanceType: t2.micro
   InstanceSecurityGroup:
     Type: 'AWS::EC2::SecurityGroup'
