@@ -7,7 +7,6 @@ Resources:
   TestInstance:
     Type: AWS::EC2::Instance
     Properties:
-      AvailabilityZone: us-east-2a
       ImageId: ami-074cce78125f09d61
       InstanceType: !Ref EC2InstanceType
       SecurityGroups:
