@@ -1,11 +1,28 @@
-AWSTemplateFormatVersion: "2010-09-09"
+arameters:
+  EC2InstanceType:
+    Description: The Instance Type Chosen for EC2
+    Type: String
+    
 Resources:
-  Ec2Instance:
-    Type: 'AWS::EC2::Instance'
+  TestInstance:
+    Type: AWS::EC2::Instance
     Properties:
-      Region: us-east-2
-      EC2InstanceType: t2.micro
+      AvailabilityZone: us-east-2a
       ImageId: ami-074cce78125f09d61
-      KeyName: mykey
-      SecurityGroupIds:
-        - sg-d321a69f
+      InstanceType: !Ref EC2InstanceType
+      SecurityGroups:
+        - !Ref HTTPSecurityGroup
+
+  HTTPSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Enable port 80 and port 443
+      SecurityGroupIngress:
+      - CidrIp: 0.0.0.0/0
+        FromPort: 80
+        IpProtocol: tcp
+        ToPort: 80
+      - CidrIp: 0.0.0.0/0
+        FromPort: 443
+        IpProtocol: tcp
+        ToPort: 443
