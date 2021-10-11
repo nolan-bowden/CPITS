@@ -4,5 +4,7 @@ Resources:
     Type: 'AWS::EC2::Instance'
     Properties:
       EC2InstanceType: t2.micro
-      KeyName: mykey
       ImageId: ami-074cce78125f09d61
+      KeyName: mykey
+      SecurityGroupIds:
+        - sg-d321a69f
