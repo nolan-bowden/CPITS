@@ -21,5 +21,5 @@ jobs:
         uses: aws-actions/aws-cloudformation-github-deploy@v1
         with:
           name: cloudformation
-          template: cloudformation.yml
+          template: cloudformation.yaml
           no-fail-on-empty-changeset: "1"
