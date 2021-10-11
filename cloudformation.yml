@@ -3,6 +3,7 @@ Resources:
   Ec2Instance:
     Type: 'AWS::EC2::Instance'
     Properties:
+      Region: us-east-2
       EC2InstanceType: t2.micro
       ImageId: ami-074cce78125f09d61
       KeyName: mykey
