@@ -9,4 +9,4 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Create App
-        uses: python_app/action.yml
+        uses: python_app/
