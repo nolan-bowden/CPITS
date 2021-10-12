@@ -19,4 +19,4 @@ def writeToCSV(weather):
 apiKey = 'f4b4e38c6f0c8058fe74e738c4721056'
 cities = ['Dallas', 'Houston', 'Austin', 'San+Antonio', 'Fort+Worth']
 weather = getWeather(cities)
-writeToCSV(weather)
+print(weather)
