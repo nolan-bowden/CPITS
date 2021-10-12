@@ -1,0 +1,12 @@
+on:
+  push:
+
+jobs:
+  hello_world:
+    runs-on: ubuntu-latest
+    name: Flask App
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Create App
+        uses: python_app/action.yml
