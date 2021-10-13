@@ -1,5 +1,5 @@
-name: 'Hello World'
-description: 'Flask App'
+name: 'Python App'
+description: 'Python App'
 runs:
   using: 'docker'
   image: 'Dockerfile'
