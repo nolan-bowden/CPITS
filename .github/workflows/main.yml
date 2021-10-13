@@ -2,9 +2,9 @@ on:
   push:
 
 jobs:
-  hello_world:
+  python_app:
     runs-on: ubuntu-latest
-    name: Flask App
+    name: Python App
     steps:
       - name: Checkout
         uses: actions/checkout@v2
